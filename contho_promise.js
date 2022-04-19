@@ -5,7 +5,7 @@ function getCurrentTime() {
     return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
 }
 
-function con_tho_an_co() {
+function con_tho_an_co(gioBatDauDi) {
     return new Promise( (resolve, reject) => {
         console.log('Khi tho bat dau an, code chay luc:',getCurrentTime())
         setTimeout(() => {
@@ -15,7 +15,7 @@ function con_tho_an_co() {
             {
                 console.log('Tho an xong , code chay luc:',getCurrentTime())
                 gioHienTai = gioBatDauDi +1;
-                console.log('con tho an co luc: ',gioHienTai,'\n')
+                console.log('con tho an co luc: ',gioHienTai,'H\n')
                 resolve(gioHienTai)
             }
             else{
@@ -30,7 +30,7 @@ function con_tho_di_xem_phim() {
         setTimeout(() => {
             console.log('Tho xem phim xong, code chay luc:',getCurrentTime())
             gioHienTai = gioHienTai + 2;
-            console.log('con tho di xem phim xong luc: ',gioHienTai,'\n')
+            console.log('con tho di xem phim xong luc: ',gioHienTai,'H\n')
             resolve(gioHienTai)
         }, 2000);
     })
@@ -41,13 +41,13 @@ function con_tho_di_dao () {
         setTimeout(() => {
             console.log('Tho di dao xong, code chay luc:',getCurrentTime())
             gioHienTai = gioHienTai + 1;
-            console.log('con tho di dao xong luc: ',gioHienTai)
+            console.log('con tho di dao xong luc: ',gioHienTai,'H')
             resolve(gioHienTai)
         }, 1000); 
     })
 }
 
-con_tho_an_co()
+con_tho_an_co(gioBatDauDi)
 .then( () => {
     return con_tho_di_xem_phim()
 })

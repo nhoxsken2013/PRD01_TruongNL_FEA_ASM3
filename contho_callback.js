@@ -10,7 +10,7 @@ function con_tho_an_co(hanhdongsaukhianco) {
     setTimeout(() => {
         gioHienTai = gioBatDauDi +1;
         console.log('Tho an xong , code chay luc:',getCurrentTime())
-        console.log('con tho an co luc: ',gioHienTai,'\n')
+        console.log('con tho an co luc: ',gioHienTai,'H\n')
         hanhdongsaukhianco()
     }, 1000);
 }
@@ -19,7 +19,7 @@ function con_tho_di_xem_phim(hanhdongsaukhixemphim) {
     setTimeout(() => {
         gioHienTai = gioHienTai + 2;
         console.log('Tho xem phim xong, code chay luc:',getCurrentTime())
-        console.log('con tho xem phim xong luc: ',gioHienTai,'\n')
+        console.log('con tho xem phim xong luc: ',gioHienTai,'H\n')
         hanhdongsaukhixemphim()
     }, 2000);
 }
@@ -28,7 +28,7 @@ function con_tho_di_dao () {
     setTimeout(() => {
         gioHienTai = gioHienTai + 1;
         console.log('Tho di dao xong, code chay luc:',getCurrentTime())
-        console.log('con tho di dao xong luc: ',gioHienTai)
+        console.log('con tho di dao xong luc: ',gioHienTai,'H')
     }, 1000);
 }
 
